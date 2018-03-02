@@ -44,7 +44,7 @@ easily add pager annotations to web pages with missing or incorrect `rel="prev"`
 These annotations can then be consumed by an addon or userscript which allows pages to be navigated
 by keyboard e.g. the <kbd>[[</kbd> and <kbd>]]</kbd> key bindings in [Tridactyl](https://github.com/cmcaine/tridactyl), [Vim Vixen](https://github.com/ueokande/vim-vixen) &c.
 
-Existing `rel`s are read in a case-insensitive way, but new `rel`s preserve the supplied case e.g.:
+Existing `rel` values are read in a case-insensitive way, but new `rel` values preserve the supplied case e.g.:
 
 ```javascript
 $('<a rel="NEXT"></a>').addRel('next') // <a rel="NEXT"></a>
