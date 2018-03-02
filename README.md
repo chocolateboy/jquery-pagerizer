@@ -30,7 +30,7 @@ Save the minified file shipped in the the `dist` directory, or use a CDN e.g.:
 // @version       0.0.1
 // @include       http://www.example.com/examples/*
 // @require       https://code.jquery.com/jquery-3.3.1.min.js
-// @require       https://cdn.rawgit.com/chocolateboy/jquery-pagerizer/v2.0.0/dist/pagerizer.min.js
+// @require       https://cdn.rawgit.com/chocolateboy/jquery-pagerizer/v1.0.0/dist/pagerizer.min.js
 // ==/UserScript==
 
 $('a#older').addRel('prev')
