@@ -44,11 +44,11 @@ easily add pager annotations to web pages with missing or incorrect `rel="prev"`
 These annotations can then be consumed by an addon or userscript which allows pages to be navigated
 by keyboard e.g. the <kbd>[[</kbd> and <kbd>]]</kbd> key bindings in [Tridactyl](https://github.com/cmcaine/tridactyl), [Vim Vixen](https://github.com/ueokande/vim-vixen) &c.
 
-Existing `rel` values are read in a case-insensitive way, but new `rel` values preserve the supplied case e.g.:
+`rel` values are normalized to lowercase before being added or removed e.g.:
 
 ```javascript
-$('<a rel="NEXT"></a>').addRel('next') // <a rel="NEXT"></a>
-$('<a rel="quux"></a>').addRel('Prev') // <a rel="quux Prev"></a>
+$('<a rel="NEXT"></a>').addRel('next') // <a rel="next"></a>
+$('<a rel="quux"></a>').addRel('Prev') // <a rel="quux prev"></a>
 ```
 
 Although designed to facilitate the manipulation of pager annotations, the plugin can be used to add or remove
