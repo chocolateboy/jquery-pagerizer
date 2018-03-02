@@ -16,7 +16,7 @@ A jQuery plugin to add next/previous page annotations to web pages
 
 ## INSTALL
 
-Save the minified file shipped in the the `dist` directory, or use a CDN e.g.:
+Save the minified file shipped in the `dist` directory, or use a CDN e.g.:
 
 * [RawGit](https://cdn.rawgit.com/chocolateboy/jquery-pagerizer/v1.0.0/dist/pagerizer.min.js)
 * [GitCDN](https://gitcdn.xyz/repo/chocolateboy/jquery-pagerizer/v1.0.0/dist/pagerizer.min.js)
