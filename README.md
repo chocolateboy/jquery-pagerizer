@@ -67,7 +67,7 @@ $('<a rel="foo foo bar"></a>').removeRel('foo') // <a rel="bar"></a>
 
 ### addRel
 
-**Signature**: addRel(rel: ...String) → JQuery
+**Signature**: addRel(rels: ...String) → JQuery
 
 ```javascript
 $('a#older').addRel('prev')
@@ -78,7 +78,7 @@ Add the specified `rel` values to the matching element or elements.
 
 ### findRelLinks
 
-**Signature**: findRelLinks(rel: ...String) → JQuery
+**Signature**: findRelLinks(rels: ...String) → JQuery
 
 ```javascript
 const $existingLinks = $(document).findRelLinks()
@@ -94,7 +94,7 @@ findRelLinks('prev', 'previous', 'next')
 
 ### removeRel
 
-**Signature**: (rel: ...String) → JQuery
+**Signature**: (rels: ...String) → JQuery
 
 ```javascript
 // remove all next/previous-page rel links
