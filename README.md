@@ -51,8 +51,8 @@ $('<a rel="NEXT"></a>').addRel('next') // <a rel="next"></a>
 $('<a rel="quux"></a>').addRel('Prev') // <a rel="quux prev"></a>
 ```
 
-Although designed to facilitate the manipulation of pager annotations, the plugin can be used to add or remove
-any `rel` attributes with the expected "string set" semantics.
+Although developed to facilitate the manipulation of pager annotations, the plugin can be used to add or remove
+any `rel` values with the expected "[string set](https://www.w3.org/TR/html5/infrastructure.html#set-of-space-separated-tokens)" semantics.
 
 ```javascript
 $('<a></a>').addRel('foo')                      // <a rel="foo"></a>
