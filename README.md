@@ -94,7 +94,7 @@ findRelLinks('prev', 'previous', 'next')
 
 ### removeRel
 
-**Signature**: (rels: ...string) → JQuery
+**Signature**: removeRel(rels: ...string) → JQuery
 
 ```javascript
 // remove all next/previous-page rel links
