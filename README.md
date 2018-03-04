@@ -44,7 +44,7 @@ easily add pager annotations to web pages with missing or incorrect `rel="prev"`
 These annotations can then be consumed by an addon or userscript which allows pages to be navigated
 by keyboard e.g. the <kbd>[[</kbd> and <kbd>]]</kbd> key bindings in [Tridactyl](https://github.com/cmcaine/tridactyl), [Vim Vixen](https://github.com/ueokande/vim-vixen) &c.
 
-`rel` values are normalized to lowercase before being added or removed e.g.:
+`rel` keywords are normalized to lowercase before being added or removed e.g.:
 
 ```javascript
 $('<a rel="NEXT"></a>').addRel('next') // <a rel="next"></a>
@@ -52,7 +52,7 @@ $('<a rel="quux"></a>').addRel('Prev') // <a rel="quux prev"></a>
 ```
 
 Although developed to facilitate the manipulation of pager annotations, the plugin can be used to add or remove
-any `rel` values with the expected "[token set](https://www.w3.org/TR/html5/infrastructure.html#set-of-space-separated-tokens)" semantics.
+any `rel` keywords with the expected "[token set](https://www.w3.org/TR/html5/infrastructure.html#set-of-space-separated-tokens)" semantics:
 
 ```javascript
 $('<a></a>').addRel('foo')                      // <a rel="foo"></a>
@@ -74,7 +74,7 @@ $('a#older').addRel('prev')
 $('a#newer').addRel('next')
 ```
 
-Add the specified `rel` values to the matching element or elements.
+Add the specified `rel` keywords to the matching element or elements.
 
 ### findRelLinks
 
@@ -85,8 +85,8 @@ const $existingLinks = $(document).findRelLinks()
 const $onlyNextLinks = $(document).findRelLinks('next')
 ```
 
-Return all A and LINK elements that have `rel` attributes which include any of the supplied values.
-If no `rel` values are supplied, the call is equivalent to:
+Return all A and LINK elements that have `rel` attributes which include any of the supplied keywords.
+If no `rel` keywords are supplied, the call is equivalent to:
 
 ```javascript
 findRelLinks('prev', 'previous', 'next')
@@ -105,14 +105,14 @@ $('a.next-topic').removeRel('next')
 $('a.current-page').next().addRel('next')
 ```
 
-Removes the specified `rel` values from the `rel` attribute and returns the jQuery instance.
-If no `rel` values are supplied, the call is equivalent to:
+Removes the specified `rel` keywords from the `rel` attribute and returns the jQuery instance.
+If no `rel` keywords are supplied, the call is equivalent to:
 
 ```javascript
 removeRel('next', 'prev', 'previous')
 ```
 
-If all `rel` values are removed, the `rel` attribute is removed:
+If all `rel` keywords are removed, the `rel` attribute is removed:
 
 ```javascript
 $('<a rel="foo"></a>').removeRel('foo') // <a></a>
@@ -126,6 +126,7 @@ $('<a rel="foo"></a>').removeRel('foo') // <a></a>
 
 ## SEE ALSO
 
+* [HTML Standard - Link Types](https://html.spec.whatwg.org/dev/links.html#linkTypes)
 * [Pagerizer Userscripts](https://github.com/chocolateboy/userscripts#pagerizers)
 * [The Stigmergic Userscript Pattern](https://ecmanaut.blogspot.co.uk/2006/04/stigmergic-user-script-pattern.html)
 * [A Survey of Rel Values on the Web](http://blog.unto.net/a-survey-of-rel-values-on-the-web.html)
