@@ -1,5 +1,7 @@
 # jquery-pagerizer
 
+A jQuery plugin to add next/previous page annotations to web pages
+
 - [INSTALL](#install)
 - [SYNOPSIS](#synopsis)
 - [DESCRIPTION](#description)
@@ -11,8 +13,6 @@
 - [SEE ALSO](#see-also)
 - [AUTHOR](#author)
 - [COPYRIGHT AND LICENSE](#copyright-and-license)
-
-A jQuery plugin to add next/previous page annotations to web pages
 
 ## INSTALL
 
