@@ -137,7 +137,7 @@ $('<a rel="foo"></a>').removeRel('foo') // <a></a>
 
 ## COPYRIGHT AND LICENSE
 
-Copyright © 2013-2018 by chocolateboy
+Copyright © 2013-2018 by chocolateboy.
 
-jquery-pagerizer is free software; you can redistribute it and/or modify it under the terms
+This is free software; you can redistribute it and/or modify it under the terms
 of the [Artistic License 2.0](http://www.opensource.org/licenses/artistic-license-2.0.php).
