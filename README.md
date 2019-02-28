@@ -16,10 +16,10 @@ A jQuery plugin to add next/previous page annotations to web pages
 
 ## INSTALL
 
-Save the minified file shipped in the `dist` directory, or use a CDN e.g.:
+Grab the [minified file from the `dist` directory](https://raw.githubusercontent.com/chocolateboy/jquery-pagerizer/master/dist/pagerizer.min.js), or use a CDN e.g.:
 
-* [RawGit](https://cdn.rawgit.com/chocolateboy/jquery-pagerizer/v1.0.0/dist/pagerizer.min.js)
-* [GitCDN](https://gitcdn.xyz/repo/chocolateboy/jquery-pagerizer/v1.0.0/dist/pagerizer.min.js)
+- [GitCDN](https://gitcdn.xyz/repo/chocolateboy/jquery-pagerizer/4ad7fcd7dd3b87553bae257ee7e16a8294ddcf7e/dist/pagerizer.min.js)
+- [jsDelivr](https://cdn.jsdelivr.net/gh/chocolateboy/jquery-pagerizer@4ad7fcd7dd3b87553bae257ee7e16a8294ddcf7e/dist/pagerizer.min.js)
 
 ## SYNOPSIS
 
@@ -30,7 +30,7 @@ Save the minified file shipped in the `dist` directory, or use a CDN e.g.:
 // @version       0.0.1
 // @include       http://www.example.com/examples/*
 // @require       https://code.jquery.com/jquery-3.3.1.min.js
-// @require       https://cdn.rawgit.com/chocolateboy/jquery-pagerizer/v1.0.0/dist/pagerizer.min.js
+// @require       https://cdn.jsdelivr.net/gh/chocolateboy/jquery-pagerizer@1.0.0/dist/pagerizer.min.js
 // ==/UserScript==
 
 $('a#older').addRel('prev')
@@ -39,10 +39,11 @@ $('a#newer').addRel('next')
 
 ## DESCRIPTION
 
-jQuery Pagerizer is a [jQuery](https://jquery.com/) plugin which exposes helper methods that can be used to
+jQuery Pagerizer is a [jQuery](https://jquery.com/) plugin which exposes helper methods which can be used to
 easily add pager annotations to web pages with missing or incorrect `rel="prev"` and `rel="next"` attributes.
 These annotations can then be consumed by an addon or userscript which allows pages to be navigated
-by keyboard e.g. the <kbd>[[</kbd> and <kbd>]]</kbd> key bindings in [Tridactyl](https://github.com/cmcaine/tridactyl), [Vim Vixen](https://github.com/ueokande/vim-vixen) &c.
+by keyboard e.g. the <kbd>[[</kbd> and <kbd>]]</kbd> key bindings in [Tridactyl](https://github.com/cmcaine/tridactyl),
+[Vim Vixen](https://github.com/ueokande/vim-vixen) etc.
 
 `rel` keywords are normalized to lowercase before being added or removed e.g.:
 
@@ -122,7 +123,7 @@ $('<a rel="foo"></a>').removeRel('foo') // <a></a>
 
 * This plugin should work in any browser with ES5 support.
 * It has been tested with jQuery 3.x, and may not work with earlier versions.
-* It has been tested on Greasemonkey 3, but should work in all current userscript engines.
+* It has been tested on Greasemonkey 3 and Violentmonkey, but should work in all current userscript engines.
 
 ## SEE ALSO
 
@@ -137,7 +138,7 @@ $('<a rel="foo"></a>').removeRel('foo') // <a></a>
 
 ## COPYRIGHT AND LICENSE
 
-Copyright © 2013-2018 by chocolateboy.
+Copyright © 2013-2019 by chocolateboy.
 
 This is free software; you can redistribute it and/or modify it under the terms
 of the [Artistic License 2.0](http://www.opensource.org/licenses/artistic-license-2.0.php).
